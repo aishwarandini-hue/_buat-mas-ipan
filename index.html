@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Mas Ipan ✦</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,body{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#020b2d,#06164f,#020814);
+  color:white;
+}
+
+body{
+  position:relative;
+}
+
+.slides{
+  display:flex;
+  width:400vw;
+  height:100vh;
+  transition:transform 1s cubic-bezier(.77,0,.18,1);
+}
+
+.slide{
+  width:100vw;
+  height:100vh;
+  flex-shrink:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  padding:20px;
+}
+
+/* glass */
+.glass{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:35px;
+  box-shadow:0 0 40px rgba(255,105,180,.22);
+  z-index:2;
+}
+
+/* button */
+.btn{
+  margin-top:22px;
+  padding:14px 34px;
+  border:none;
+  border-radius:999px;
+  background:linear-gradient(45deg,#ff4fa3,#7b8cff);
+  color:white;
+  font-size:1rem;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow:0 0 25px rgba(255,105,180,.45);
+  animation:pulse 2s infinite;
+  z-index:5;
+}
+
+@keyframes pulse{
+  50%{transform:scale(1.06);}
+}
+
+/* aesthetic text */
+.title-script{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(3rem,10vw,5rem);
+  text-align:center;
+  color:#ff8fd2;
+  text-shadow:0 0 25px rgba(255,105,180,.75);
+}
+
+/* slide 1 */
+.gift{
+  font-size:7rem;
+  animation:floatGift 3s ease-in-out infinite;
+  color:#ff9ad5;
+}
+
+@keyframes floatGift{
+  50%{transform:translateY(-15px);}
+}
+
+.hearts span{
+  position:absolute;
+  color:#ff69b4;
+  animation:floatUp linear infinite;
+  opacity:.8;
+  text-shadow:0 0 12px rgba(255,105,180,.8);
+}
+
+@keyframes floatUp{
+  from{transform:translateY(110vh);}
+  to{transform:translateY(-20vh);}
+}
+
+/* slide 2 */
+.dots{
+  display:flex;
+  gap:12px;
+  margin:20px;
+}
+
+.dot{
+  width:18px;
+  height:18px;
+  border:2px solid pink;
+  border-radius:50%;
+}
+
+.dot.fill{
+  background:pink;
+  box-shadow:0 0 10px pink;
+}
+
+.keypad{
+  display:grid;
+  grid-template-columns:repeat(3,80px);
+  gap:14px;
+}
+
+.key{
+  height:72px;
+  border:none;
+  border-radius:22px;
+  background:linear-gradient(145deg,rgba(255,79,163,.85),rgba(123,140,255,.75));
+  color:white;
+  font-size:1.5rem;
+  font-weight:700;
+  box-shadow:0 0 18px rgba(255,105,180,.25);
+}
+
+.key:active{
+  transform:scale(.95);
+}
+
+/* rain */
+.tiktok-rain{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  z-index:0;
+}
+
+.tiktok-line{
+  position:absolute;
+  top:-30%;
+  width:4px;
+  border-radius:999px;
+  background:linear-gradient(transparent,rgba(255,105,180,.95),transparent);
+  box-shadow:0 0 18px rgba(255,105,180,.65);
+  animation:tiktokFall linear infinite;
+}
+
+@keyframes tiktokFall{
+  to{transform:translateY(180vh);}
+}
+
+/* SLIDE 3 HEART */
+.heart-wrap{
+  position:relative;
+  width:320px;
+  height:320px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:2;
+}
+
+.heart{
+  position:relative;
+  width:100%;
+  height:100%;
+  animation:spinHeart 14s linear infinite;
+}
+
+.heart span{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform-origin:0 0;
+  color:#ff8fd2;
+  font-size:18px;
+  font-weight:700;
+  text-shadow:
+    0 0 10px rgba(255,105,180,.9),
+    0 0 20px rgba(255,105,180,.8);
+  white-space:nowrap;
+}
+
+@keyframes spinHeart{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+/* slide 4 cake */
+.cake{
+  position:relative;
+  width:220px;
+  height:220px;
+  margin-bottom:25px;
+  animation:floatCake 3s ease-in-out infinite;
+  z-index:2;
+}
+
+@keyframes floatCake{
+  50%{transform:translateY(-10px);}
+}
+
+.plate{
+  position:absolute;
+  bottom:0;
+  left:20px;
+  width:180px;
+  height:18px;
+  background:rgba(255,182,193,.45);
+  border-radius:50%;
+}
+
+.layer1{
+  position:absolute;
+  bottom:18px;
+  left:30px;
+  width:160px;
+  height:105px;
+  background:linear-gradient(180deg,#ffe0f0,#ffc1dc,#ff9ecb);
+  border-radius:22px 22px 38px 38px;
+}
+
+.cream1{
+  position:absolute;
+  bottom:102px;
+  left:30px;
+  width:160px;
+  height:28px;
+  background:#ff69b4;
+  border-radius:20px;
+}
+
+.face-eye{
+  position:absolute;
+  width:10px;
+  height:10px;
+  background:#2d1b3d;
+  border-radius:50%;
+  bottom:58px;
+}
+
+.eye1{left:82px;}
+.eye2{left:128px;}
+
+.face-smile{
+  position:absolute;
+  width:28px;
+  height:14px;
+  border-bottom:4px solid #2d1b3d;
+  border-radius:0 0 20px 20px;
+  left:96px;
+  bottom:42px;
+}
+
+.candle{
+  position:absolute;
+  width:18px;
+  height:58px;
+  left:101px;
+  bottom:125px;
+  border-radius:10px;
+  background:repeating-linear-gradient(45deg,#ff4fa3 0 8px,#fff 8px 16px);
+}
+
+.flame{
+  position:absolute;
+  width:18px;
+  height:28px;
+  left:101px;
+  bottom:178px;
+  background:radial-gradient(circle,#ffd54f 20%,#ff9800 70%);
+  border-radius:50%;
+  box-shadow:0 0 25px gold;
+  animation:flicker .8s infinite alternate;
+}
+
+@keyframes flicker{
+  to{transform:scale(1.15);}
+}
+
+/* message */
+.message{
+  max-width:92%;
+  padding:24px;
+  line-height:1.8;
+  text-align:center;
+  font-size:clamp(1.6rem,5vw,2.3rem);
+  font-family:'Great Vibes',cursive;
+  border-radius:45px;
+  box-shadow:0 0 30px rgba(255,105,180,.35);
+  text-shadow:0 0 12px rgba(255,105,180,.65);
+  z-index:2;
+}
+</style>
+</head>
+
+<body>
+
+<div class="slides" id="slides">
+
+<!-- SLIDE 1 -->
+<section class="slide">
+  <div class="hearts" id="hearts"></div>
+
+  <div class="glass" style="padding:35px;max-width:360px;text-align:center;">
+    <div class="gift">🌑</div>
+    <h1 class="title-script">something special for u mas Ipan ✦</h1>
+    <button class="btn" onclick="nextSlide()">Buka</button>
+  </div>
+</section>
+
+<!-- SLIDE 2 -->
+<section class="slide">
+  <div class="glass" style="padding:30px;text-align:center;">
+    <h2 style="color:#ff9ad5;font-family:'Great Vibes',cursive;font-size:clamp(2.7rem,8vw,4.2rem);text-shadow:0 0 20px rgba(255,105,180,.7);">
+      kode nya 1405 ya mas Ipan ,tunggu sebentar ya mungkin sedikit ngelag🌑
+    </h2>
+
+    <div class="dots" id="dots"></div>
+    <div class="keypad" id="keys"></div>
+  </div>
+</section>
+
+<!-- SLIDE 3 -->
+<section class="slide">
+  <div class="tiktok-rain" id="heartRain"></div>
+
+  <div class="heart-wrap">
+    <div class="heart" id="heart"></div>
+  </div>
+
+  <button class="btn" onclick="nextSlide()">Lanjut</button>
+</section>
+
+<!-- SLIDE 4 -->
+<section class="slide">
+  <div class="tiktok-rain" id="tiktokRain"></div>
+
+  <div class="cake">
+    <div class="plate"></div>
+    <div class="layer1"></div>
+    <div class="cream1"></div>
+
+    <div class="face-eye eye1"></div>
+    <div class="face-eye eye2"></div>
+    <div class="face-smile"></div>
+
+    <div class="candle"></div>
+    <div class="flame"></div>
+  </div>
+
+  <div class="glass message">
+    Barakallah fii umrik mas Ipan Udah naik level ke 23 tahun nih xixi, semoga mas Ipan selalu dikelilingi hal-hal baik, dilancarkan segalanya, sehat selalu yaa, makin bahagia, di lancarkan terus rezeki nya, dan tetap jadi mas Ipan yang baik dan keren xixi
+  </div>
+</section>
+
+</div>
+
+<script>
+let current = 0;
+
+function nextSlide(){
+  if(current < 3){
+    current++;
+    document.getElementById("slides").style.transform =
+      `translateX(-${current * 100}vw)`;
+  }
+}
+
+/* slide 1 stars */
+for(let i=0;i<30;i++){
+  const h=document.createElement("span");
+  h.innerHTML="✦";
+  h.style.left=Math.random()*100+"vw";
+  h.style.fontSize=(16+Math.random()*18)+"px";
+  h.style.animationDuration=(4+Math.random()*5)+"s";
+  document.getElementById("hearts").appendChild(h);
+}
+
+/* slide 2 code */
+const correctCode="1405";
+let input="";
+
+for(let i=0;i<4;i++){
+  const d=document.createElement("div");
+  d.className="dot";
+  document.getElementById("dots").appendChild(d);
+}
+
+[1,2,3,4,5,6,7,8,9,"",0].forEach(num=>{
+  const key=document.createElement("button");
+  key.className="key";
+
+  if(num===""){
+    key.style.visibility="hidden";
+  }else{
+    key.textContent=num;
+    key.onclick=()=>{
+      if(input.length<4){
+        input+=num;
+        document.querySelectorAll(".dot")[input.length-1].classList.add("fill");
+
+        if(input.length===4){
+          setTimeout(()=>{
+            if(input===correctCode){
+              nextSlide();
+            }else{
+              alert("kode nya salah yaa xixi");
+              input="";
+              document.querySelectorAll(".dot").forEach(dot=>dot.classList.remove("fill"));
+            }
+          },250);
+        }
+      }
+    };
+  }
+
+  document.getElementById("keys").appendChild(key);
+});
+
+/* slide 3 heart */
+const heart = document.getElementById("heart");
+const text = "Happy Birthday ";
+const points = 180;
+
+for(let i=0; i<points; i++){
+  const t = (Math.PI * 2 * i) / points;
+
+  const x = 16 * Math.pow(Math.sin(t),3);
+  const y = -(13*Math.cos(t) - 5*Math.cos(2*t) - 2*Math.cos(3*t) - Math.cos(4*t));
+
+  const span = document.createElement("span");
+  span.innerText = text;
+
+  const posX = x * 11;
+  const posY = y * 11;
+
+  span.style.transform = `
+    translate(${posX}px, ${posY}px)
+    rotate(${t}rad)
+  `;
+
+  heart.appendChild(span);
+}
+
+/* slide 3 rain */
+for(let i=0;i<22;i++){
+  const line=document.createElement("div");
+  line.className="tiktok-line";
+  line.style.left=Math.random()*100+"vw";
+  line.style.height=(100+Math.random()*180)+"px";
+  line.style.animationDuration=(1.6+Math.random()*2.2)+"s";
+  line.style.animationDelay=Math.random()*3+"s";
+  document.getElementById("heartRain").appendChild(line);
+}
+
+/* slide 4 rain */
+for(let i=0;i<28;i++){
+  const line=document.createElement("div");
+  line.className="tiktok-line";
+  line.style.left=Math.random()*100+"vw";
+  line.style.height=(120+Math.random()*220)+"px";
+  line.style.animationDuration=(1.8+Math.random()*2.8)+"s";
+  line.style.animationDelay=Math.random()*3+"s";
+  document.getElementById("tiktokRain").appendChild(line);
+}
+</script>
+
+</body>
+</html>
